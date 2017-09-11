@@ -34,6 +34,22 @@ const moduleConfig = {
 
                 generatedIndexHTMLFile : "gen.recipe1-basics.index.html",
                 indexHTMLTemplateFileLocation : path.join(appBasePath, "recipe1-basics", "recipe1-basics.index.html")
+            },
+            {
+                generatedIndexJSName : "gen.basics.index",
+                indexJSLocation : path.join(appBasePath, "basics", "basics.index.ts"),
+
+                generatedIndexCSSName : "gen.basics.style",
+                cssFiles : [path.join(appBasePath, "basics", "styles", "basics.style.css")],
+
+                generatedVendorJSName : "gen.basics.jsvendor",
+                jsVendors : path.join(appBasePath, "basics", "basics.jsvendor.ts"),
+
+                generatedVendorCSSName : "gen.basics.css.vendor",
+                vendorCSSFiles : [path.join(projectBasePath, "node_modules", "bootstrap", "dist", "css", "bootstrap.css")],
+
+                generatedIndexHTMLFile : "gen.basics.index.html",
+                indexHTMLTemplateFileLocation : path.join(appBasePath, "basics", "basics.index.html")
             }
         ]
     }
