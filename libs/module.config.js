@@ -50,6 +50,22 @@ const moduleConfig = {
 
                 generatedIndexHTMLFile : "gen.basics.index.html",
                 indexHTMLTemplateFileLocation : path.join(appBasePath, "basics", "basics.index.html")
+            },
+            {
+                generatedIndexJSName : "gen.routing.index",
+                indexJSLocation : path.join(appBasePath, "routing", "routing.index.ts"),
+
+                generatedIndexCSSName : "gen.routing.style",
+                cssFiles : [path.join(appBasePath, "routing", "styles", "routing.style.css")],
+
+                generatedVendorJSName : "gen.routing.jsvendor",
+                jsVendors : path.join(appBasePath, "routing", "routing.jsvendor.ts"),
+
+                generatedVendorCSSName : "gen.routing.css.vendor",
+                vendorCSSFiles : [path.join(projectBasePath, "node_modules", "bootstrap", "dist", "css", "bootstrap.css")],
+
+                generatedIndexHTMLFile : "gen.routing.index.html",
+                indexHTMLTemplateFileLocation : path.join(appBasePath, "routing", "routing.index.html")
             }
         ]
     }
