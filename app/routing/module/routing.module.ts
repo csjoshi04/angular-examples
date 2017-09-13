@@ -10,21 +10,11 @@ import {UserComponent} from "../component/users/user/user.component";
 import {EditServerComponent} from "../component/servers/edit-server/edit-server.component";
 import {ServerComponent} from "../component/servers/server/server.component";
 import {ServersService} from "../component/servers/servers.service";
-import {RouterModule, Routes} from "@angular/router";
 import {HashLocationStrategy, Location, LocationStrategy} from "@angular/common";
-
-const appRoutes:Routes = [
-    {path:'', component : HomeComponent},
-    {path:'gen.routing.index.html', component : HomeComponent},
-    {path:'users', component : UsersComponent, children:[
-        {path:':id/:name', component : UserComponent},
-    ]},
-    {path:'servers', component : ServersComponent, children:[
-        {path:':id', component : ServerComponent},
-        {path:':id/edit', component : EditServerComponent}
-    ]},
-
-]
+import {PageNotFoundComponent} from "../component/page-not-found/page-not-found.component";
+import {AppRoutingModule} from "./routing.route.module";
+import {AuthGuard} from "../service/auth-guard.service";
+import {AuthService} from "../service/auth.service";
 
 @NgModule({
     declarations: [
@@ -34,15 +24,16 @@ const appRoutes:Routes = [
         ServersComponent,
         UserComponent,
         EditServerComponent,
-        ServerComponent
+        ServerComponent,
+        PageNotFoundComponent
     ],
     imports: [
         BrowserModule,
         FormsModule,
         HttpModule,
-        RouterModule.forRoot(appRoutes)
+        AppRoutingModule
     ],
-    providers: [ServersService, Location, {provide: LocationStrategy, useClass: HashLocationStrategy}],
+    providers: [ AuthGuard, AuthService, ServersService, Location, {provide: LocationStrategy, useClass: HashLocationStrategy}],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
