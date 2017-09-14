@@ -12,10 +12,26 @@ require('file?name=[name].[ext]!./app.component.css');
 export class AppComponent {
   suggestUserName() {
     const suggestedName = 'Superuser';
+    /*this.signupForm.setValue({
+      userData :{
+        username : suggestedName,
+        email : ""
+      },
+      secret: "pet",
+      questionAnswer : "",
+      gender: "male"
+    })*/
+    this.signupForm.form.patchValue({
+      userData :{
+        username : suggestedName
+      }
+    })
   }
 
   defaultQuestion:string ="pet"
   answer:string ="";
+  genders = ['male','female']
+  user:{};
 
   @ViewChild('f') signupForm:NgForm;
 
@@ -25,5 +41,7 @@ export class AppComponent {
 
   onSubmit(){
     console.log(this.signupForm);
+    this.user = this.signupForm.value
+    this.signupForm.reset();
   }
 }
