@@ -1,12 +1,12 @@
-import { NgModule } from '@angular/core';
-import {FormsModule} from '@angular/forms';
-import { BrowserModule }  from '@angular/platform-browser';
-import { AppComponent } from '../component/app.component';
+import {NgModule} from "@angular/core";
+import {ReactiveFormsModule} from "@angular/forms";
+import {BrowserModule} from "@angular/platform-browser";
+import {AppComponent} from "../component/app.component";
 
 @NgModule({
     imports: [
         BrowserModule,
-        FormsModule
+        ReactiveFormsModule
     ],
     declarations: [
         AppComponent
