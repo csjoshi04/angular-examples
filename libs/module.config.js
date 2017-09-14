@@ -66,6 +66,22 @@ const moduleConfig = {
 
                 generatedIndexHTMLFile : "gen.routing.index.html",
                 indexHTMLTemplateFileLocation : path.join(appBasePath, "routing", "routing.index.html")
+            },
+            {
+                generatedIndexJSName : "gen.template-form.index",
+                indexJSLocation : path.join(appBasePath, "template-form", "template-form.index.ts"),
+
+                generatedIndexCSSName : "gen.template-form.style",
+                cssFiles : [path.join(appBasePath, "template-form", "styles", "template-form.style.css")],
+
+                generatedVendorJSName : "gen.template-form.jsvendor",
+                jsVendors : path.join(appBasePath, "template-form", "template-form.jsvendor.ts"),
+
+                generatedVendorCSSName : "gen.template-form.css.vendor",
+                vendorCSSFiles : [path.join(projectBasePath, "node_modules", "bootstrap", "dist", "css", "bootstrap.css")],
+
+                generatedIndexHTMLFile : "gen.template-form.index.html",
+                indexHTMLTemplateFileLocation : path.join(appBasePath, "template-form", "template-form.index.html")
             }
         ]
     }
