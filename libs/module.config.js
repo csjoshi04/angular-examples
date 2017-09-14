@@ -82,6 +82,22 @@ const moduleConfig = {
 
                 generatedIndexHTMLFile : "gen.template-form.index.html",
                 indexHTMLTemplateFileLocation : path.join(appBasePath, "template-form", "template-form.index.html")
+            },
+            {
+                generatedIndexJSName : "gen.reactive-form.index",
+                indexJSLocation : path.join(appBasePath, "reactive-form", "reactive-form.index.ts"),
+
+                generatedIndexCSSName : "gen.reactive-form.style",
+                cssFiles : [path.join(appBasePath, "reactive-form", "styles", "reactive-form.style.css")],
+
+                generatedVendorJSName : "gen.reactive-form.jsvendor",
+                jsVendors : path.join(appBasePath, "reactive-form", "reactive-form.jsvendor.ts"),
+
+                generatedVendorCSSName : "gen.reactive-form.css.vendor",
+                vendorCSSFiles : [path.join(projectBasePath, "node_modules", "bootstrap", "dist", "css", "bootstrap.css")],
+
+                generatedIndexHTMLFile : "gen.reactive-form.index.html",
+                indexHTMLTemplateFileLocation : path.join(appBasePath, "reactive-form", "reactive-form.index.html")
             }
         ]
     }
