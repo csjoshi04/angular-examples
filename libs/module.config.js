@@ -98,6 +98,22 @@ const moduleConfig = {
 
                 generatedIndexHTMLFile : "gen.reactive-form.index.html",
                 indexHTMLTemplateFileLocation : path.join(appBasePath, "reactive-form", "reactive-form.index.html")
+            },
+            {
+                generatedIndexJSName : "gen.cmp-databinding.index",
+                indexJSLocation : path.join(appBasePath, "cmp-databinding", "cmp-databinding.index.ts"),
+
+                generatedIndexCSSName : "gen.cmp-databinding.style",
+                cssFiles : [path.join(appBasePath, "cmp-databinding", "styles", "cmp-databinding.style.css")],
+
+                generatedVendorJSName : "gen.cmp-databinding.jsvendor",
+                jsVendors : path.join(appBasePath, "cmp-databinding", "cmp-databinding.jsvendor.ts"),
+
+                generatedVendorCSSName : "gen.cmp-databinding.css.vendor",
+                vendorCSSFiles : [path.join(projectBasePath, "node_modules", "bootstrap", "dist", "css", "bootstrap.css")],
+
+                generatedIndexHTMLFile : "gen.cmp-databinding.index.html",
+                indexHTMLTemplateFileLocation : path.join(appBasePath, "cmp-databinding", "cmp-databinding.index.html")
             }
         ]
     }
