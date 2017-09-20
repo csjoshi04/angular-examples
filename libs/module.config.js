@@ -114,6 +114,22 @@ const moduleConfig = {
 
                 generatedIndexHTMLFile : "gen.cmp-databinding.index.html",
                 indexHTMLTemplateFileLocation : path.join(appBasePath, "cmp-databinding", "cmp-databinding.index.html")
+            },
+            {
+                generatedIndexJSName : "gen.directive.index",
+                indexJSLocation : path.join(appBasePath, "directive", "directive.index.ts"),
+
+                generatedIndexCSSName : "gen.directive.style",
+                cssFiles : [path.join(appBasePath, "directive", "styles", "directive.style.css")],
+
+                generatedVendorJSName : "gen.directive.jsvendor",
+                jsVendors : path.join(appBasePath, "directive", "directive.jsvendor.ts"),
+
+                generatedVendorCSSName : "gen.directive.css.vendor",
+                vendorCSSFiles : [path.join(projectBasePath, "node_modules", "bootstrap", "dist", "css", "bootstrap.css")],
+
+                generatedIndexHTMLFile : "gen.directive.index.html",
+                indexHTMLTemplateFileLocation : path.join(appBasePath, "directive", "directive.index.html")
             }
         ]
     }
