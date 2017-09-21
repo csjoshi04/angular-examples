@@ -130,6 +130,22 @@ const moduleConfig = {
 
                 generatedIndexHTMLFile : "gen.directive.index.html",
                 indexHTMLTemplateFileLocation : path.join(appBasePath, "directive", "directive.index.html")
+            },
+            {
+                generatedIndexJSName : "gen.service.index",
+                indexJSLocation : path.join(appBasePath, "service", "service.index.ts"),
+
+                generatedIndexCSSName : "gen.service.style",
+                cssFiles : [path.join(appBasePath, "service", "styles", "service.style.css")],
+
+                generatedVendorJSName : "gen.service.jsvendor",
+                jsVendors : path.join(appBasePath, "service", "service.jsvendor.ts"),
+
+                generatedVendorCSSName : "gen.service.css.vendor",
+                vendorCSSFiles : [path.join(projectBasePath, "node_modules", "bootstrap", "dist", "css", "bootstrap.css")],
+
+                generatedIndexHTMLFile : "gen.service.index.html",
+                indexHTMLTemplateFileLocation : path.join(appBasePath, "service", "service.index.html")
             }
         ]
     }
