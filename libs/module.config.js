@@ -146,6 +146,22 @@ const moduleConfig = {
 
                 generatedIndexHTMLFile : "gen.service.index.html",
                 indexHTMLTemplateFileLocation : path.join(appBasePath, "service", "service.index.html")
+            },
+            {
+                generatedIndexJSName : "gen.observable.index",
+                indexJSLocation : path.join(appBasePath, "observable", "observable.index.ts"),
+
+                generatedIndexCSSName : "gen.observable.style",
+                cssFiles : [path.join(appBasePath, "observable", "styles", "observable.style.css")],
+
+                generatedVendorJSName : "gen.observable.jsvendor",
+                jsVendors : path.join(appBasePath, "observable", "observable.jsvendor.ts"),
+
+                generatedVendorCSSName : "gen.observable.css.vendor",
+                vendorCSSFiles : [path.join(projectBasePath, "node_modules", "bootstrap", "dist", "css", "bootstrap.css")],
+
+                generatedIndexHTMLFile : "gen.observable.index.html",
+                indexHTMLTemplateFileLocation : path.join(appBasePath, "observable", "observable.index.html")
             }
         ]
     }
