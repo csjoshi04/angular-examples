@@ -4,6 +4,8 @@ import {AppComponent} from "../component/app.component";
 import {HomeComponent} from "../component/home/home.component";
 import {UserComponent} from "../component/user/user.component";
 import {AppRoutingModule} from "./observable-routing.module";
+import {HashLocationStrategy, LocationStrategy, Location} from "@angular/common";
+import {UsersService} from "../service/users.service";
 
 @NgModule({
     declarations: [
@@ -15,7 +17,7 @@ import {AppRoutingModule} from "./observable-routing.module";
         BrowserModule,
         AppRoutingModule
     ],
-    providers: [],
+    providers: [UsersService, Location, {provide: LocationStrategy, useClass: HashLocationStrategy}],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
