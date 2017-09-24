@@ -162,6 +162,22 @@ const moduleConfig = {
 
                 generatedIndexHTMLFile : "gen.observable.index.html",
                 indexHTMLTemplateFileLocation : path.join(appBasePath, "observable", "observable.index.html")
+            },
+            {
+                generatedIndexJSName : "gen.pipe.index",
+                indexJSLocation : path.join(appBasePath, "pipe", "pipe.index.ts"),
+
+                generatedIndexCSSName : "gen.pipe.style",
+                cssFiles : [path.join(appBasePath, "pipe", "styles", "pipe.style.css")],
+
+                generatedVendorJSName : "gen.pipe.jsvendor",
+                jsVendors : path.join(appBasePath, "pipe", "pipe.jsvendor.ts"),
+
+                generatedVendorCSSName : "gen.pipe.css.vendor",
+                vendorCSSFiles : [path.join(projectBasePath, "node_modules", "bootstrap", "dist", "css", "bootstrap.css")],
+
+                generatedIndexHTMLFile : "gen.pipe.index.html",
+                indexHTMLTemplateFileLocation : path.join(appBasePath, "pipe", "pipe.index.html")
             }
         ]
     }
